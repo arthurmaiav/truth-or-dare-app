@@ -33,7 +33,6 @@ public class DiceRoller extends AppCompatActivity {
     private void rollDice() {
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.dice_roll_sfx);
 
-
         int randomNumber = rng.nextInt(6) + 1; //Numero aleatorio de 1 a 6
 
         mp.start();
