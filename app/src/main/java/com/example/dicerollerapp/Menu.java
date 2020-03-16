@@ -1,42 +1,45 @@
 package com.example.dicerollerapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuAdapter;
-
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
-import com.example.dicerollerapp.BottleSpinner.BottleSpinner;
-import com.example.dicerollerapp.DiceRoller.DiceRoller;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.dicerollerapp.RecyclerMenu.ItemMenu;
+import com.example.dicerollerapp.RecyclerMenu.RVItemMenuAdapter;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Menu extends AppCompatActivity {
 
-    List<ItemMenu> listaItensMenu;
-    private Context context;
+    private List<ItemMenu> itens;
+
+    private void initializeData() {
+        itens = new ArrayList<>();
+        itens.add(new ItemMenu("Dice Roller", R.drawable.dice2, Menu.class));
+        itens.add(new ItemMenu("Bottle Spinner", R.drawable.bottle, Menu.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        initializeData();
+
+        RecyclerView rv = findViewById(R.id.recyclerView);
+        rv.setHasFixedSize(true);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        rv.setLayoutManager(llm);
+
+        RVItemMenuAdapter adapter = new RVItemMenuAdapter(itens);
+        rv.setAdapter(adapter);
     }
 
-    public void MenuAdapter(List<ItemMenu> listaItensMenu, Context context) {
-        this.listaItensMenu = listaItensMenu;
-        this.context = context;
-    }
 }
-
-//    @Override
-//    public void onClick(View v) {
-//        if (v == buttonDiceRoller)
-//            startActivity(new Intent(this, DiceRoller.class));
-//        else if (v == buttonBottleSpinner)
-//            startActivity(new Intent(this, BottleSpinner.class));
-//    }
-//}
-

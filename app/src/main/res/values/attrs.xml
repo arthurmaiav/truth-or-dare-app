@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ItemMenuCardView">
+        <attr name="funcaoText" format="string" />
+        <attr name="descText" format="string" />
+        <attr name="funcaoImage" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ItemPagamentoCardView">
+        <attr name="titlePagamentoText" format="string" />
+        <attr name="descPagamentoText" format="string" />
+        <attr name="pagamentoImage" format="reference" />
+        <attr name="butonRemoveFunction" format="reference" />
+    </declare-styleable>
+</resources>
