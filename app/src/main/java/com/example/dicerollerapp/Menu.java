@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.dicerollerapp.BottleSpinner.BottleSpinner;
+import com.example.dicerollerapp.DiceRoller.DiceRoller;
 import com.example.dicerollerapp.RecyclerMenu.ItemMenu;
 import com.example.dicerollerapp.RecyclerMenu.RVItemMenuAdapter;
 
@@ -22,8 +24,8 @@ public class Menu extends AppCompatActivity {
 
     private void initializeData() {
         itens = new ArrayList<>();
-        itens.add(new ItemMenu("Dice Roller", R.drawable.dice2, Menu.class));
-        itens.add(new ItemMenu("Bottle Spinner", R.drawable.bottle, Menu.class));
+        itens.add(new ItemMenu("Dice Roller", R.drawable.dice2, DiceRoller.class));
+        itens.add(new ItemMenu("Bottle Spinner", R.drawable.bottle, BottleSpinner.class));
     }
 
     @Override

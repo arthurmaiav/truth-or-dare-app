@@ -33,7 +33,7 @@ public class BottleSpinner extends AppCompatActivity {
             final MediaPlayer mp = MediaPlayer.create(this, R.raw.bottle_spinning_sfx);
             mp.start();
 
-            int newDir = random.nextInt(1800);
+            int newDir = random.nextInt(2000) + 1000;
             float pivotX = bottle.getWidth() / 2;
             float pivotY = bottle.getHeight() / 2;
 
