@@ -10,6 +10,7 @@ import com.example.dicerollerapp.Utilities.BottleSpinner.BottleSpinner;
 import com.example.dicerollerapp.Utilities.DiceRoller.DiceRoller;
 import com.example.dicerollerapp.MenuItem.ItemMenu;
 import com.example.dicerollerapp.MenuItem.RVItemMenuAdapter;
+import com.example.dicerollerapp.Utilities.ScoreCounter.ScoreCounter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class MainMenu extends AppCompatActivity {
         itens = new ArrayList<>();
         itens.add(new ItemMenu("Dice Roller", R.drawable.dice2, DiceRoller.class));
         itens.add(new ItemMenu("Bottle Spinner", R.drawable.bottle, BottleSpinner.class));
+        itens.add(new ItemMenu("Score Counter", R.drawable.score_icon, ScoreCounter.class));
     }
 
     @Override

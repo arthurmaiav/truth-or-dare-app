@@ -3,16 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Utilities.BottleSpinner.BottleSpinner"
-    android:background="@drawable/table_1">
+    android:background="@drawable/table_bg"
+    tools:context=".Utilities.BottleSpinner.BottleSpinner">
 
     <ImageView
         android:id="@+id/bottle"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/bottle"
         android:layout_centerInParent="true"
         android:onClick="spinBottle"
-        />
+        android:src="@drawable/bottle" />
 
 </RelativeLayout>

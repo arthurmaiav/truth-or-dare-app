@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/table_bg_dark50"
+    android:orientation="vertical"
+    tools:context=".Utilities.ScoreCounter.ScoreCounter">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/left_side"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:text="0"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="100sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="fill_parent"
+            android:background="#99FFFFFF" />
+
+        <LinearLayout
+            android:id="@+id/right_side"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:text="0"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="100sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

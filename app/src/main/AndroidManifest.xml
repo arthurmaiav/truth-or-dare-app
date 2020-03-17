@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Utilities.BottleSpinner.BottleSpinner"/>
+        <activity android:name=".Utilities.ScoreCounter.ScoreCounter"></activity>
+        <activity android:name=".Utilities.BottleSpinner.BottleSpinner" />
         <activity android:name=".Utilities.DiceRoller.DiceRoller" />
         <activity android:name=".MainMenu">
             <intent-filter>
