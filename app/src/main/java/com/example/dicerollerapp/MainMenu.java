@@ -1,24 +1,20 @@
 package com.example.dicerollerapp;
 
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.view.animation.LayoutAnimationController;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.dicerollerapp.BottleSpinner.BottleSpinner;
-import com.example.dicerollerapp.DiceRoller.DiceRoller;
-import com.example.dicerollerapp.RecyclerMenu.ItemMenu;
-import com.example.dicerollerapp.RecyclerMenu.RVItemMenuAdapter;
+import com.example.dicerollerapp.Utilities.BottleSpinner.BottleSpinner;
+import com.example.dicerollerapp.Utilities.DiceRoller.DiceRoller;
+import com.example.dicerollerapp.MenuItem.ItemMenu;
+import com.example.dicerollerapp.MenuItem.RVItemMenuAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Menu extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity {
 
     private List<ItemMenu> itens;
 

@@ -1,4 +1,4 @@
-package com.example.dicerollerapp.RecyclerMenu;
+package com.example.dicerollerapp.MenuItem;
 
 import android.content.Context;
 import android.content.res.TypedArray;

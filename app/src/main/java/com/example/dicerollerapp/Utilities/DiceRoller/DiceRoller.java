@@ -1,4 +1,4 @@
-package com.example.dicerollerapp.DiceRoller;
+package com.example.dicerollerapp.Utilities.DiceRoller;
 
 import androidx.appcompat.app.AppCompatActivity;
 

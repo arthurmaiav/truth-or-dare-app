@@ -1,4 +1,4 @@
-package com.example.dicerollerapp.BottleSpinner;
+package com.example.dicerollerapp.Utilities.BottleSpinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 

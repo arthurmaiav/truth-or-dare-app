@@ -1,4 +1,4 @@
-package com.example.dicerollerapp.RecyclerMenu;
+package com.example.dicerollerapp.MenuItem;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.dicerollerapp.Menu;
+import com.example.dicerollerapp.MainMenu;
 import com.example.dicerollerapp.R;
 
 import java.util.List;
@@ -45,7 +45,7 @@ public class RVItemMenuAdapter extends RecyclerView.Adapter<RVItemMenuAdapter.It
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), itens.get(position).activityDestination);
-                if(itens.get(position).activityDestination.equals(Menu.class)){
+                if(itens.get(position).activityDestination.equals(MainMenu.class)){
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 }
                 view.getContext().startActivity(intent);
