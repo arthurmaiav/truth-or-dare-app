@@ -37,4 +37,11 @@ public class ScoreCounter extends AppCompatActivity {
         leftSidePoints++;
         leftSideTV.setText(String.valueOf(leftSidePoints));
     }
+
+    public void refreshScore(View v) {
+        rightSidePoints = 0;
+        leftSidePoints = 0;
+        rightSideTV.setText(String.valueOf(rightSidePoints));
+        leftSideTV.setText(String.valueOf(leftSidePoints));
+    }
 }

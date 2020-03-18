@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +10,7 @@
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -27,6 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="0"
                 android:textAllCaps="true"
@@ -34,10 +34,28 @@
                 android:textSize="100sp" />
         </LinearLayout>
 
-        <View
-            android:layout_width="5dp"
-            android:layout_height="fill_parent"
-            android:background="#99FFFFFF" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:background="#99FFFFFF" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:alpha="0.6"
+                android:onClick="refreshScore"
+                android:src="@drawable/refresh_icon" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/right_side"
@@ -52,6 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginRight="10dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="0"
                 android:textAllCaps="true"
@@ -61,5 +80,11 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"></LinearLayout>
 
 </LinearLayout>

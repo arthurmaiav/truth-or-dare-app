@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cv"
     android:layout_width="match_parent"
     android:layout_height="100dp"
@@ -7,7 +8,9 @@
     android:layout_marginTop="16dp"
     android:layout_marginRight="16dp"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    app:cardCornerRadius="4dp"
+    app:cardBackgroundColor="#98ffffff">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,7 +24,10 @@
             android:textColor="@android:color/black"
             android:text="Dice Roller"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="24dp"
+            android:fontFamily="@font/roboto_medium"/>
 
         <ImageView
             android:id="@+id/imagemItem"
