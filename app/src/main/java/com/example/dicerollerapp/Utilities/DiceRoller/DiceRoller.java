@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
 import com.example.dicerollerapp.R;
@@ -15,6 +17,8 @@ public class DiceRoller extends AppCompatActivity {
 
     private ImageView imageViewDice;
     private Random rng = new Random();
+
+    private boolean rolling;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +35,8 @@ public class DiceRoller extends AppCompatActivity {
     }
 
     private void rollDice() {
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.dice_roll_sfx);
-
+        rollDiceAnimation();
         int randomNumber = rng.nextInt(6) + 1; //Numero aleatorio de 1 a 6
-
-        mp.start();
-
         switch (randomNumber) {
             case 1:
                 imageViewDice.setImageResource(R.drawable.dice1);
@@ -56,6 +56,37 @@ public class DiceRoller extends AppCompatActivity {
             case 6:
                 imageViewDice.setImageResource(R.drawable.dice6);
                 break;
+        }
+    }
+
+    public void rollDiceAnimation() {
+        if (!rolling) {
+            final MediaPlayer mp = MediaPlayer.create(this, R.raw.dice_roll_sfx);
+            mp.start();
+
+            float pivotX = imageViewDice.getWidth() / 2;
+            float pivotY = imageViewDice.getHeight() / 2;
+
+            Animation rotate = new RotateAnimation(0,360, pivotX, pivotY);
+            rotate.setDuration(300);
+            rotate.setFillAfter(true);
+
+            rotate.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    rolling = true;
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    rolling = false;
+                }
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                }
+            });
+
+            imageViewDice.startAnimation(rotate);
         }
     }
 }

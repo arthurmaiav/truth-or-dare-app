@@ -9,8 +9,8 @@
     android:layout_marginRight="16dp"
     android:clickable="true"
     android:focusable="true"
-    app:cardCornerRadius="4dp"
-    app:cardBackgroundColor="#98ffffff">
+    app:cardBackgroundColor="#CCffffff"
+    app:cardCornerRadius="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,21 +21,21 @@
             android:id="@+id/tituloItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:text="Dice Roller"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:textSize="24dp"
-            android:fontFamily="@font/roboto_medium"/>
+            android:fontFamily="@font/roboto_medium"
+            android:text="Dice Roller"
+            android:textColor="@android:color/black"
+            android:textSize="24dp" />
 
         <ImageView
             android:id="@+id/imagemItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:adjustViewBounds="true"
-            android:src="@drawable/dice1"
-            android:layout_alignParentRight="true"/>
+            android:src="@drawable/dice1" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
