@@ -19,10 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:onClick="leftSidePoint">
 
             <TextView
-                android:id="@+id/team_a_score"
+                android:id="@+id/left_side_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -43,10 +44,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:onClick="rightSidePoint">
 
             <TextView
-                android:id="@+id/team_b_score"
+                android:id="@+id/right_side_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
