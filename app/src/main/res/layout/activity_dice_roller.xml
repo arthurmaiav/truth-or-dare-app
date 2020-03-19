@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Utilities.DiceRoller.DiceRoller"
-    android:background="@drawable/table_bg">
+    android:background="@drawable/table_bg"
+    tools:context=".Utilities.DiceRoller.DiceRoller">
 
 
     <ImageView
-        android:id="@+id/image_view_dice"
+        android:id="@+id/dice"
         android:layout_width="250dp"
         android:layout_height="250dp"
+        android:onClick="rollDice"
         android:src="@drawable/dice1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

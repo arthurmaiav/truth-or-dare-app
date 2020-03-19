@@ -37,12 +37,7 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        AdView adView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-
-        adView.loadAd(adRequest);
+        loadAd();
 
         initializeData();
 
@@ -53,6 +48,15 @@ public class MainMenu extends AppCompatActivity {
 
         RVItemMenuAdapter adapter = new RVItemMenuAdapter(itens);
         rv.setAdapter(adapter);
+    }
+
+    private void loadAd() {
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+
+        adView.loadAd(adRequest);
     }
 
 }
