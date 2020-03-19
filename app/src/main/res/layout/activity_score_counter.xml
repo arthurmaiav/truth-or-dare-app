@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/score_counter_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/table_bg_dark50"
-    android:orientation="vertical"
-    tools:context=".Utilities.ScoreCounter.ScoreCounter">
+    android:background="@drawable/table_bg_dark30"
+    tools:context=".Activities.ScoreCounter.ScoreCounter">
 
     <LinearLayout
-        android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -53,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@drawable/crayon_white_line"/>
+                android:background="@drawable/crayon_white_line" />
 
             <ImageView
                 android:layout_width="30dp"
@@ -62,7 +61,7 @@
                 android:layout_marginBottom="5dp"
                 android:alpha="1"
                 android:onClick="refreshScore"
-                android:src="@drawable/refresh_icon.png" />
+                android:src="@drawable/refresh_icon" />
         </LinearLayout>
 
         <LinearLayout
@@ -70,8 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="rightSidePoint"
-            android:gravity="center">
+            android:gravity="center"
+            android:onClick="rightSidePoint">
 
 
             <RelativeLayout
@@ -80,27 +79,22 @@
                 android:layout_weight="1"
                 android:background="@drawable/paper_score"
                 android:gravity="center">
-            <TextView
-                android:id="@+id/right_side_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="10dp"
-                android:fontFamily="@font/walterturncoat_regular"
-                android:text="0"
-                android:textAllCaps="true"
-                android:textColor="#ff6f9c"
-                android:textSize="100sp" />
+
+                <TextView
+                    android:id="@+id/right_side_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/walterturncoat_regular"
+                    android:text="0"
+                    android:textAllCaps="true"
+                    android:textColor="#ff6f9c"
+                    android:textSize="100sp" />
             </RelativeLayout>
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/bottom_layout"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"></LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

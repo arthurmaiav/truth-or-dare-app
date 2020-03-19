@@ -1,16 +1,17 @@
 package com.example.dicerollerapp;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.dicerollerapp.Utilities.BottleSpinner.BottleSpinner;
-import com.example.dicerollerapp.Utilities.DiceRoller.DiceRoller;
+import com.example.dicerollerapp.Activities.BottleSpinner.BottleSpinner;
+import com.example.dicerollerapp.Activities.DiceRoller.DiceRoller;
 import com.example.dicerollerapp.MenuItem.ItemMenu;
 import com.example.dicerollerapp.MenuItem.RVItemMenuAdapter;
-import com.example.dicerollerapp.Utilities.ScoreCounter.ScoreCounter;
+import com.example.dicerollerapp.Activities.ScoreCounter.ScoreCounter;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 

@@ -1,21 +1,25 @@
-package com.example.dicerollerapp.Utilities.ScoreCounter;
+package com.example.dicerollerapp.Activities.ScoreCounter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.dicerollerapp.MainMenu;
 import com.example.dicerollerapp.R;
+import com.example.dicerollerapp.Util.OnSwipeTouchListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
 public class ScoreCounter extends AppCompatActivity {
 
-    private TextView rightSide;
-    private TextView leftSide;
+    private TextView rightSideTV;
+    private TextView leftSideTV;
     private int rightSidePoints = 0;
     private int leftSidePoints = 0;
     private InterstitialAd mInterstitialAd;
@@ -25,15 +29,16 @@ public class ScoreCounter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_counter);
 
-        loadAd();
+        rightSideTV = findViewById(R.id.right_side_score);
+        leftSideTV = findViewById(R.id.left_side_score);
 
-        rightSide = findViewById(R.id.right_side_score);
-        leftSide = findViewById(R.id.left_side_score);
+        loadAd();
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         } else {
@@ -43,19 +48,19 @@ public class ScoreCounter extends AppCompatActivity {
 
     public void rightSidePoint(View v) {
         rightSidePoints++;
-        rightSide.setText(String.valueOf(rightSidePoints));
+        rightSideTV.setText(String.valueOf(rightSidePoints));
     }
 
     public void leftSidePoint(View v) {
         leftSidePoints++;
-        leftSide.setText(String.valueOf(leftSidePoints));
+        leftSideTV.setText(String.valueOf(leftSidePoints));
     }
 
     public void refreshScore(View v) {
         rightSidePoints = 0;
         leftSidePoints = 0;
-        rightSide.setText(String.valueOf(rightSidePoints));
-        leftSide.setText(String.valueOf(leftSidePoints));
+        rightSideTV.setText(String.valueOf(rightSidePoints));
+        leftSideTV.setText(String.valueOf(leftSidePoints));
     }
 
     private void loadAd() {

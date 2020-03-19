@@ -14,9 +14,9 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713"/>
-        <activity android:name=".Utilities.ScoreCounter.ScoreCounter"></activity>
-        <activity android:name=".Utilities.BottleSpinner.BottleSpinner" />
-        <activity android:name=".Utilities.DiceRoller.DiceRoller" />
+        <activity android:name=".Activities.ScoreCounter.ScoreCounter"></activity>
+        <activity android:name=".Activities.BottleSpinner.BottleSpinner" />
+        <activity android:name=".Activities.DiceRoller.DiceRoller" />
         <activity android:name=".MainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

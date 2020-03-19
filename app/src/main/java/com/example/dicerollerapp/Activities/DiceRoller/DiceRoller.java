@@ -1,7 +1,6 @@
-package com.example.dicerollerapp.Utilities.DiceRoller;
+package com.example.dicerollerapp.Activities.DiceRoller;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,7 +9,12 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.dicerollerapp.MainMenu;
 import com.example.dicerollerapp.R;
+import com.example.dicerollerapp.Util.OnSwipeTouchListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
@@ -18,6 +22,7 @@ import java.util.Random;
 
 public class DiceRoller extends AppCompatActivity {
 
+    private ConstraintLayout layout;
     private ImageView dice;
     private Random rng = new Random();
     private boolean rolling;
@@ -28,14 +33,24 @@ public class DiceRoller extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dice_roller);
 
-        loadAd();
-
+        layout = findViewById(R.id.dice_roller_layout);
         dice = findViewById(R.id.dice);
+
+        layout.setOnTouchListener(new OnSwipeTouchListener(this) {
+            public void onSwipeRight() {
+                Intent intent = new Intent(DiceRoller.this, MainMenu.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            }
+        });
+
+        loadAd();
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         } else {
