@@ -8,15 +8,15 @@
     android:layout_marginTop="16dp"
     android:layout_marginRight="16dp"
     android:clickable="true"
+    android:focusable="true"
     app:cardBackgroundColor="@android:color/transparent"
-    android:focusable="true">
+    app:cardElevation="0dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/paper_menu_item"
-        android:padding="10dp"
-        >
+        android:background="@drawable/menu_item"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/tituloItem"
@@ -34,11 +34,11 @@
             android:id="@+id/imagemItem"
             android:layout_width="70sp"
             android:layout_height="70sp"
-            android:paddingTop="10sp"
-            android:paddingRight="20sp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:adjustViewBounds="true"
+            android:paddingTop="10sp"
+            android:paddingRight="20sp"
             android:src="@drawable/dice1" />
 
     </RelativeLayout>

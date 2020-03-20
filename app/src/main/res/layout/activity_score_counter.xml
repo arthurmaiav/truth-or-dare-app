@@ -24,7 +24,7 @@
                 android:layout_width="150sp"
                 android:layout_height="150sp"
                 android:layout_weight="1"
-                android:background="@drawable/paper_score"
+                android:background="@drawable/score_item"
                 android:gravity="center">
 
                 <TextView
@@ -77,7 +77,7 @@
                 android:layout_width="150sp"
                 android:layout_height="150sp"
                 android:layout_weight="1"
-                android:background="@drawable/paper_score"
+                android:background="@drawable/score_item"
                 android:gravity="center">
 
                 <TextView

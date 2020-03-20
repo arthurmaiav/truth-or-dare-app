@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,7 @@ import java.util.List;
 public class MainMenu extends AppCompatActivity {
 
     private List<ItemMenu> itens;
+    private CardView itemCard;
 
     private void initializeData() {
         itens = new ArrayList<>();
@@ -34,6 +36,8 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        itemCard = findViewById(R.id.cv);
+
         loadAd();
 
         initializeData();
@@ -45,7 +49,9 @@ public class MainMenu extends AppCompatActivity {
 
         RVItemMenuAdapter adapter = new RVItemMenuAdapter(itens);
         rv.setAdapter(adapter);
+
     }
+
 
     private void loadAd() {
         AdView adView = findViewById(R.id.adView);
