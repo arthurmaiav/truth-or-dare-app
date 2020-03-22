@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/table_bg_dark30"
-    tools:context=".Activities.ScoreCounter.ScoreCounter">
+    tools:context="com.gametools.Activities.ScoreCounter.ScoreCounter">
 
     <LinearLayout
         android:layout_width="match_parent"

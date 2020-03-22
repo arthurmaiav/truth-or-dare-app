@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/table_bg_dark30"
-    tools:context=".Activities.BottleSpinner.BottleSpinner">
+    tools:context="com.gametools.Activities.BottleSpinner.BottleSpinner">
 
     <ImageView
         android:id="@+id/bottle"

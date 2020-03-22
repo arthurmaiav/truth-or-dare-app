@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenu"
+    tools:context="com.gametools.MainMenu"
     android:background="@drawable/table_bg_dark30">
 
     <RelativeLayout
@@ -25,7 +25,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+            ads:adUnitId="ca-app-pub-1244092820470940/6956471921">
         </com.google.android.gms.ads.AdView>
 
     </RelativeLayout>

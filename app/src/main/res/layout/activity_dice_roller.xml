@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/table_bg_dark30"
-    tools:context=".Activities.DiceRoller.DiceRoller">
+    tools:context="com.gametools.Activities.DiceRoller.DiceRoller">
 
     <ImageView
         android:id="@+id/dice"

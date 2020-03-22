@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='DiceRollerApp'
+rootProject.name='Truth or Dare - Game Tools'
