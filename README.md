@@ -12,7 +12,7 @@
 &nbsp;
 &nbsp;
 
-<p float="left">
+<p align="center">
   <img src="img/screenshot_frame_3.png" width="200"/>
   <img src="img/screenshot_frame_2.png" width="200"/>
   <img src="img/screenshot_frame_1.png" width="200"/>
